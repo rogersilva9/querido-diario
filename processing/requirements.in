@@ -10,4 +10,6 @@ python-decouple
 python-magic
 requests
 scrapy
+schematics
 SQLAlchemy
+spidermon
