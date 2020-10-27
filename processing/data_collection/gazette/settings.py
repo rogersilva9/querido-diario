@@ -15,6 +15,7 @@ FILES_STORE = "/mnt/data/"
 
 EXTENSIONS = {
     "spidermon.contrib.scrapy.extensions.Spidermon": 500,
+    "scrapy.extensions.closespider.CloseSpider": 600,
 }
 SPIDERMON_ENABLED = True
 SPIDERMON_VALIDATION_SCHEMAS = ["gazette/schema.json"]

@@ -1,4 +1,5 @@
 ENV_FILE := .env
+ITEMS_COUNT ?= 1000
 
 setup: 
 	cp .env.example $(ENV_FILE)
@@ -42,3 +43,6 @@ shell:
 
 run_spider_since:
 	docker-compose run --rm processing bash -c "cd data_collection && scrapy crawl -a start_date=$(START_DATE) $(SPIDER)"
+
+run_spider_to_get_some_items:
+	docker-compose run --rm processing bash -c "cd data_collection && scrapy crawl -s CLOSESPIDER_ITEMCOUNT=$(ITEMS_COUNT) $(SPIDER)"
